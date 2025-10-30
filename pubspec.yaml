@@ -39,10 +39,12 @@ dependencies:
   flutter_launcher_icons: ^0.13.1
   win32: ^5.5.0
 
-flutter_icons:
+flutter_launcher_icons:
   android: true
   ios: true
-  image_path: "assets/images/yellowbird-midflap.png"
+  image_path: "assets/images/app_logo.png"
+  adaptive_icon_background: "#f36e02"
+  adaptive_icon_foreground: "assets/images/app_logo.png"
 
 dev_dependencies:
   flutter_test:
