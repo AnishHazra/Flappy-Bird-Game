@@ -1,8 +1,7 @@
 import 'dart:async';
-
 import 'package:flame/components.dart';
-import 'package:flame/events.dart';
 import 'package:flame/game.dart';
+import 'package:flame/input.dart';
 import 'package:flappy_bird_app/components/background.dart';
 import 'package:flappy_bird_app/components/bird.dart';
 import 'package:flappy_bird_app/components/ground.dart';
