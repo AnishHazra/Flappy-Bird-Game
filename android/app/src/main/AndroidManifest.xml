@@ -1,8 +1,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Required for AdMob -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
     <application
         android:label="Flying Modi"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+
+        <!-- AdMob App ID - Use test App ID for testing -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-7410840568226754~1358219940"/>
+
         <activity
             android:name=".MainActivity"
             android:exported="true"

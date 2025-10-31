@@ -38,6 +38,7 @@ dependencies:
   flame_audio: ^2.10.6
   flutter_launcher_icons: ^0.13.1
   win32: ^5.5.0
+  google_mobile_ads: ^5.2.0
 
 flutter_launcher_icons:
   android: true
