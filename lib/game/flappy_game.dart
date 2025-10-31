@@ -2,7 +2,9 @@ import 'dart:async';
 import 'package:flame/components.dart';
 import 'package:flame/game.dart';
 import 'package:flame/input.dart';
+import 'package:flame_audio/flame_audio.dart';
 import 'package:flappy_bird_app/components/background.dart';
+import 'package:flappy_bird_app/game/assets.dart';
 import 'package:flappy_bird_app/components/bird.dart';
 import 'package:flappy_bird_app/components/ground.dart';
 import 'package:flappy_bird_app/components/pipe_group.dart';
@@ -15,6 +17,7 @@ class FlappyBirdGame extends FlameGame with TapDetector, HasCollisionDetection {
   late Bird bird;
   Timer interval = Timer(Config.pipeInterval, repeat: true);
   bool isCollided = false;
+  bool isStarted = false;
   late TextComponent score;
 
   @override
@@ -45,6 +48,16 @@ class FlappyBirdGame extends FlameGame with TapDetector, HasCollisionDetection {
 
   @override
   void onTap() {
+    if (!isStarted) {
+      isStarted = true;
+      interval.start();
+      try {
+        FlameAudio.loop(Assets.backgroundSound);
+      } catch (e) {
+        FlameAudio.play(Assets.backgroundSound);
+      }
+    }
+
     bird.fly();
   }
 
